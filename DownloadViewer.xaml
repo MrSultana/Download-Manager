@@ -8,7 +8,27 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="DownloadViewer">
 
-    <Grid>
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50"/>
+            
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
         
+        <!-- Download List -->
+        <Border Grid.Column="0" Grid.Row="0" Height="35" Padding="5" 
+                Background="Blue">
+            <Label VerticalAlignment="Center" Foreground="White">Downloads</Label>
+        </Border>
+        <ListBox Name="Downloads" Grid.Column="0" Grid.Row="1">
+            <ListBoxItem>Item 1</ListBoxItem>
+            <ListBoxItem>Item 2</ListBoxItem>
+            <ListBoxItem>Item 3</ListBoxItem>
+            <ListBoxItem>Item 4</ListBoxItem>
+        </ListBox>
     </Grid>
 </Page>
