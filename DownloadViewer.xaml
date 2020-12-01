@@ -10,21 +10,23 @@
 
     <Grid Margin="10">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="50"/>
-            
+            <ColumnDefinition Width="750"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="23*"/>
+
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
         </Grid.RowDefinitions>
-        
+
         <!-- Download List -->
-        <Border Grid.Column="0" Grid.Row="0" Height="35" Padding="5" 
-                Background="Blue">
-            <Label VerticalAlignment="Center" Foreground="White">Downloads</Label>
+        <Border Grid.Column="0" Grid.Row="0" Height="35" 
+                Background="#ffb84d" VerticalAlignment="Top">
+            <Label VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="White">Downloads</Label>
         </Border>
-        <ListBox Name="Downloads" Grid.Column="0" Grid.Row="1">
+        <ListBox Name="Downloads" Grid.Column="0" Margin="0,346,0,0" Grid.RowSpan="2">
             <ListBoxItem>Item 1</ListBoxItem>
             <ListBoxItem>Item 2</ListBoxItem>
             <ListBoxItem>Item 3</ListBoxItem>
