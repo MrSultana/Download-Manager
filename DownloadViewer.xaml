@@ -25,14 +25,26 @@
             <Label VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="White"
                    FontWeight="Bold">Downloads</Label>
         </Border>
-        <ListBox Name="Downloads" Grid.Row="1" Width="768"
+        <ListView Name="Downloads" Grid.Row="1" Width="768"
                  HorizontalAlignment="Center" BorderBrush="#ffb84d" 
                  Grid.RowSpan="2" BorderThickness="2">
-            <ListBoxItem>Item 1</ListBoxItem>
-            <ListBoxItem>Item 2</ListBoxItem>
-            <ListBoxItem>Item 3</ListBoxItem>
-            <ListBoxItem>Item 4</ListBoxItem>
-        </ListBox>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Width="800" VerticalAlignment="Center">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="400" />
+                            <ColumnDefinition Width="200" />
+                            <ColumnDefinition Width="200" />
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Grid.Column="0" Text="Download Name" />
+                        <TextBlock Grid.Column="1" Text="Download Size" />
+                        <TextBlock Grid.Column="2" Text="Download Date" />
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
 
         <!-- Button Row -->
         <Button Grid.Column="0" Grid.Row="3" HorizontalAlignment="Left" 
