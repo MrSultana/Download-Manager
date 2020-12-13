@@ -25,10 +25,5 @@ namespace Download_Manager
         {
             InitializeComponent();
         }
-
-        public void FileAccess()
-        {
-            DriveInfo driveInfo = new DriveInfo(@"C:\Users\eturn\Downloads");
-        }
     }
 }

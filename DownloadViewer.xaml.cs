@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace Download_Manager
 {
@@ -18,9 +19,17 @@ namespace Download_Manager
     /// </summary>
     public partial class DownloadViewer : Page
     {
+
+        private DriveInfo dInfo = new DriveInfo("C:\\Users\\eturn\\Downloads");
+        
         public DownloadViewer()
         {
             InitializeComponent();
+        }
+
+        public DriveName(string dName)
+        {
+
         }
     }
 }

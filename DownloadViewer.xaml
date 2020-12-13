@@ -33,14 +33,14 @@
                     <Grid Width="800" VerticalAlignment="Center">
 
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="400" />
+                            <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="200" />
                             <ColumnDefinition Width="200" />
                         </Grid.ColumnDefinitions>
 
-                        <TextBlock Grid.Column="0" Text="Download Name" />
-                        <TextBlock Grid.Column="1" Text="Download Size" />
-                        <TextBlock Grid.Column="2" Text="Download Date" />
+                        <TextBlock Grid.Column="0" Text="{Binding dirName}" />
+                        <TextBlock Grid.Column="1" Text="{Binding downloadSize}" />
+                        <TextBlock Grid.Column="2" Text="{Binding downloadDate}" />
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>
