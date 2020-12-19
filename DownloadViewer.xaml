@@ -30,6 +30,9 @@
                  Grid.RowSpan="2" BorderThickness="2">
             <ListView.ItemTemplate>
                 <DataTemplate>
+                    <DataTemplate.Resources>
+                       <local:Drive x:Key="dataSource" /> 
+                    </DataTemplate.Resources>
                     <Grid Width="800" VerticalAlignment="Center">
 
                         <Grid.ColumnDefinitions>
@@ -38,9 +41,9 @@
                             <ColumnDefinition Width="200" />
                         </Grid.ColumnDefinitions>
 
-                        <TextBlock Grid.Column="0" Text="{Binding dirName}" />
-                        <TextBlock Grid.Column="1" Text="{Binding downloadSize}" />
-                        <TextBlock Grid.Column="2" Text="{Binding downloadDate}" />
+                        <TextBlock Grid.Column="0" Text="{Binding Source={StaticResource dataSource}, Path=dirName}" />
+                        <TextBlock Grid.Column="1" Text="{Binding Path=downloadSize}" />
+                        <TextBlock Grid.Column="2" Text="{Binding Path=downloadDate}" />
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>

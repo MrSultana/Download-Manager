@@ -19,17 +19,25 @@ namespace Download_Manager
     /// </summary>
     public partial class DownloadViewer : Page
     {
-
-        private DriveInfo dInfo = new DriveInfo("C:\\Users\\eturn\\Downloads");
         
         public DownloadViewer()
         {
             InitializeComponent();
         }
-
-        public DriveName(string dName)
-        {
-
-        }
+        
     }
+
+    public class Drive
+    {
+        
+        public DriveInfo dInfo = new DriveInfo("C:\\Users\\eturn\\Downloads");
+        public string dirName { get; set; }
+
+        public Drive()
+        {
+            dirName = dInfo.Name;
+        }
+
+    }
+
 }
